@@ -17,14 +17,14 @@ VALUES ("Software Engineer I", "Engineering", 1, 125000),
        ("Legal Assistant", "Legal", 5, 100000),
        ("Lawyer", "Legal", 5, 215000);
 
-INSERT INTO employee (id, first_name, last_name, role, role_id, manager_id)
-VALUES (1, "Greg", "Marzec", "CFO" 8, NULL),
-       (2, "Sally", "Mae", "Software Engineer I", 1, 3),
-       (3, "John", "Smith", "Senior Software Engineer", 2, NULL),
-       (4, "Josh", "Scheuring", "SDR", 5, 5),
-       (5, "Jamie", "Roe", "Sales AE", 6, NULL),
-       (6, "Alex", "Farley", "Lawyer", 10, NULL),
-       (7, "Nicholas", "Bergo", "Legal Assistant", 9, 10),
+INSERT INTO employee (id, first_name, last_name, role, role_id, manager, manager_id)
+VALUES (1, "Greg", "Marzec", "CFO" 8, NULL, NULL),
+       (2, "Sally", "Mae", "Software Engineer I", 1, "John Smith", 3),
+       (3, "John", "Smith", "Senior Software Engineer", 2, NULL, NULL),
+       (4, "Josh", "Scheuring", "SDR", 5, "Jamie Roe", 5),
+       (5, "Jamie", "Roe", "Sales AE", 6, NULL, NULL),
+       (6, "Alex", "Farley", "Lawyer", 10, NULL, NULL),
+       (7, "Nicholas", "Bergo", "Legal Assistant", 9, "Alex Farley", 10),
        (8, "Lily", "Kot", "Director of Marketing", 4, NULL),
        (9, "Kelli", "Frank", "Demand Generation Lead", 3, 8),
        (10, "Bryce", "Watson", "Accountant", 7, 1);
