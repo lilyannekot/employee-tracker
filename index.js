@@ -182,7 +182,7 @@ function init() {
         inquirer.prompt(addEmployee).then(function (data) {
           console.table(data);
           db.query(
-            `INSERT INTO employee (first_name, last_name, role, manager_id) VALUES("${data.employeeFirstName}", "${data.employeeLastName}", "${data.employeeRole}", "${data.employeeManager}");`,
+            `INSERT INTO employee (first_name, last_name, role, manager) VALUES("${data.employeeFirstName}", "${data.employeeLastName}", "${data.employeeRole}", "${data.employeeManager}");`,
             (err, results) => {
               if (err) {
                 throw err;
