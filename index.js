@@ -169,7 +169,12 @@ function init() {
         inquirer.prompt(addRole).then(function (data) {
           console.table(data);
           db.query(
-            `INSERT INTO role (title, department, salary) VALUES("${data.roleTitle}", "${data.roleDepartment}", "${data.roleSalary}")`
+            `INSERT INTO role (title, department, salary) VALUES("${data.roleTitle}", "${data.roleDepartment}", "${data.roleSalary}");`,
+            (err, results) => {
+              if (err) {
+                throw err;
+              }
+            }
           );
 
           return init();
@@ -178,7 +183,12 @@ function init() {
         inquirer.prompt(addEmployee).then(function (data) {
           console.table(data);
           db.query(
-            `INSERT INTO role (first_name, last_name, role_id, manager_id) VALUES("${data.employeeFirstName}", "${data.employeeLastName}", "${data.employeeRole}", "${data.employeeManager}")`
+            `INSERT INTO employee (first_name, last_name, role, manager_id) VALUES("${data.employeeFirstName}", "${data.employeeLastName}", "${data.employeeRole}", "${data.employeeManager}");`,
+            (err, results) => {
+              if (err) {
+                throw err;
+              }
+            }
           );
 
           return init();
