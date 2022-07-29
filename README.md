@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This project entailed creating a command-line application that allows a user to manage a company's employee database, using Node.js, Inquirer, and MySQL.
+This project entailed creating a [command-line application](https://drive.google.com/file/d/1WTYH143uvFUBQrqzjyvyjNovocDFgjRx/view?usp=sharing) that allows a user to manage a company's employee database, using Node.js, Inquirer, and MySQL.
 
 ## Table of Contents
 
