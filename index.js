@@ -65,16 +65,16 @@ const addEmployee = [
     name: "employeeManager",
     message: "Who is the employee's manager?",
     choices: [
-      "Greg Marzec, CFO",
-      "Sally Mae, Software Engineer 1",
-      "John Smith, Senior Software Engineer",
-      "Josh Scheuring, SDR",
-      "Jamie Roe, Sales AE",
-      "Alex Farley, Lawyer",
-      "Nicholas Bergo, Legal Assistant",
-      "Lily Kot, Director of Marketing",
-      "Kelli Frank, Demand Generation Lead",
-      "Bryce Watson, Accountant",
+      "Greg Marzec",
+      "Sally Mae",
+      "John Smith",
+      "Josh Scheuring",
+      "Jamie Roe",
+      "Alex Farley",
+      "Nicholas Bergo",
+      "Lily Kot",
+      "Kelli Frank",
+      "Bryce Watson",
     ],
   },
 ];
@@ -162,7 +162,6 @@ function init() {
               }
             }
           );
-          // How do I get the new department added to the list of all departments?
           return init();
         });
       } else if (answers.starterPrompt === "Add a role") {
@@ -183,7 +182,7 @@ function init() {
         inquirer.prompt(addEmployee).then(function (data) {
           console.table(data);
           db.query(
-            `INSERT INTO employee (first_name, last_name, role, manager) VALUES("${data.employeeFirstName}", "${data.employeeLastName}", "${data.employeeRole}", "${data.employeeManager}");`,
+            `INSERT INTO employee (first_name, last_name, role, manager_id) VALUES("${data.employeeFirstName}", "${data.employeeLastName}", "${data.employeeRole}", "${data.employeeManager}");`,
             (err, results) => {
               if (err) {
                 throw err;
