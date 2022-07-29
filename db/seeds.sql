@@ -7,17 +7,17 @@ VALUES (1, "Engineering"),
        (4, "Finance"),
        (5, "Legal");
 
-INSERT INTO role (title, department, department_id, salary)
-VALUES ("Software Engineer I", "Engineering", 1, 125000),
-       ("Senior Software Engineer", "Engineering", 1, 200000),
-       ("Demand Generation Lead", "Marketing", 2, 80000),
-       ("Director of Marketing", "Marketing", 2, 160000),
-       ("SDR", "Sales", 3, 65000),
-       ("Sales AE", "Sales", 3, 80000),
-       ("Accountant", "Finance", 4, 90000),
-       ("CFO", "Finance", 4, 300000),
-       ("Legal Assistant", "Legal", 5, 100000),
-       ("Lawyer", "Legal", 5, 215000);
+INSERT INTO role (id, title, department, department_id, salary)
+VALUES (1, "Software Engineer I", "Engineering", 1, 125000),
+       (2, "Senior Software Engineer", "Engineering", 1, 200000),
+       (3, "Demand Generation Lead", "Marketing", 2, 80000),
+       (4, "Director of Marketing", "Marketing", 2, 160000),
+       (5, "SDR", "Sales", 3, 65000),
+       (6, "Sales AE", "Sales", 3, 80000),
+       (7, "Accountant", "Finance", 4, 90000),
+       (8, "CFO", "Finance", 4, 300000),
+       (9, "Legal Assistant", "Legal", 5, 100000),
+       (10, "Lawyer", "Legal", 5, 215000);
 
 INSERT INTO employee (id, first_name, last_name, role, role_id, manager, manager_id)
 VALUES (1, "Greg", "Marzec", "CFO", 8, NULL, NULL),

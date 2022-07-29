@@ -18,6 +18,8 @@ This project entailed creating a command-line application that allows a user to 
 
 ## Project Demonstration
 
+![Project Demonstrations](assets/employee-tracker-gif.gif)
+
 ## Code Snippet
 
 The code below is used to add a new department to the table of current departments in the database. If a user selects "Add a department" from the initial list of prompted questions, they are then shown a question requiring the department name. The new department is then inserted into the exisiting table of departments.
